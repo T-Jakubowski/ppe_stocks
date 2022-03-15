@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Windows;
+using System.Collections.Generic;
 
 namespace Gestion_Stock_PPE
 {
@@ -14,15 +15,16 @@ namespace Gestion_Stock_PPE
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             //string cs = "sever=localhost;userid=root;password=;database=stocks";
-            DAOStock dAOStock = new DAOStock();
+            DAORole dao = new DAORole();
+            
             try
             {
-                dAOStock.updateObjectByName(4, "AR719", "AX938");
-                //dAOStock.insertObject(5, "DF066", "VP349");
-                dAOStock.deleteObject("DF066", "VP349");
+                dao.delete(4);
+                dao.updateById(3, "compta", "0111001");
+                dao.insert("Barde", "01121111");
             }
             catch (MySqlException ex)
             {

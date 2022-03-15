@@ -7,8 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Test BDD&#xD;&#xA;" HorizontalAlignment="Left" Margin="261,114,0,0" VerticalAlignment="Top" Width="100" Height="32"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="261,64,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-
+        <Label Content="Connexion" HorizontalAlignment="Left" Margin="83,102,0,0" VerticalAlignment="Top"/>
+        <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Left" Margin="53,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="32">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Password&#xA;" HorizontalAlignment="Left" Margin="53,241,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="32">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox HorizontalAlignment="Left" Margin="53,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="login"/>
+        <TextBox HorizontalAlignment="Left" Margin="53,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="103,327,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
     </Grid>
 </Window>

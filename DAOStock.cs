@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
 
+
 namespace Gestion_Stock_PPE
 {
     internal class DAOStock
@@ -16,10 +17,26 @@ namespace Gestion_Stock_PPE
         {
             con = new MySqlConnection("server=localhost;userid=root;password=;database=stocks");
         }
-        public void getObject()
+        public List<Stock> getObject(string pharmacieCode)
         {
+            List<Stock> stocks = new List<Stock>();
             con.Open();
-            con.Close();
+            MySqlCommand query = new MySqlCommand();
+            query.Connection = con;
+            query.CommandText = ("Select * from stocks where pharmacieCode = @pharmacieCode");
+            query.Parameters.AddWithValue("pharmacieCode", pharmacieCode);
+            query.Prepare();
+            MySqlDataReader dataReader = query.ExecuteReader();
+            while (dataReader.Read())
+            {
+                Stock stock = new Stock();
+                stock.setPharmacieCode((string)dataReader["pharmacieCode"]);
+                stock.setObjetCode((string)dataReader["objetCode"]);
+                stock.setQuantite((int)dataReader["quantite"]);
+                stocks.Add(stock);
+            }
+            dataReader.Close();
+            return stocks;
         }
         public void deleteObject(string pharmacieCode, string objetCode)
         {
