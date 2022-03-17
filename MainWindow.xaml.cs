@@ -15,21 +15,36 @@ namespace Gestion_Stock_PPE
             InitializeComponent();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void SignIn(object sender, RoutedEventArgs e)
         {
-            //string cs = "sever=localhost;userid=root;password=;database=stocks";
-            DAORole dao = new DAORole();
-            
-            try
+
+
+            DAOUser DAOUser = new DAOUser();
+            if (DAOUser.searchIfUserExist(login.Text, password.Text))
             {
-                dao.delete(4);
-                dao.updateById(3, "compta", "0111001");
-                dao.insert("Barde", "01121111");
+                navBarreGrid.Visibility = Visibility.Visible;
+                loginGrid.Visibility = Visibility.Hidden;
+                Main.Content = new Accueil();
             }
-            catch (MySqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Mauvais Identifiant/mdp");
             }
+        }
+
+        private void GoToAccueil(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Accueil();
+        }
+
+        private void GoToPharmacie(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Pharmacie();
+        }
+
+        private void GoToStock(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new StocksScene();
         }
     }
 }

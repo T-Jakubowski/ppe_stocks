@@ -53,5 +53,24 @@ namespace Gestion_Stock_PPE
             insert.ExecuteNonQuery();
             con.Close();
         }
+
+        public bool searchIfUserExist(string identifiant, string password)
+        {
+            bool isExist = false;
+            con.Open();
+            MySqlCommand query = new MySqlCommand();
+            query.Connection = con;
+            query.CommandText = ("Select * from user where identifiant = @identifiant and password = @password");
+            query.Parameters.AddWithValue("identifiant", identifiant);
+            query.Parameters.AddWithValue("password", password);
+            query.Prepare();
+            MySqlDataReader dataReader = query.ExecuteReader();
+            while (dataReader.Read())
+            {
+                isExist = true;
+            }
+            dataReader.Close();
+            return isExist;
+        }
     }
 }

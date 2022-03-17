@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\App.xaml
-11407045341
+4-554314391
 
-132045775765
+181715265374
 1961971441867
-MainWindow.xaml;
+Accueil.xaml;Connexion.xaml;MainWindow.xaml;StocksScene.xaml;
 
 False
 

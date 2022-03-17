@@ -35,3 +35,9 @@ C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\bin\Debug\net6.0-windo
 C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\obj\Debug\net6.0-windows\Accueil.g.cs
+C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\obj\Debug\net6.0-windows\Connexion.g.cs
+C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\obj\Debug\net6.0-windows\Accueil.baml
+C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\obj\Debug\net6.0-windows\Connexion.baml
+C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\obj\Debug\net6.0-windows\StocksScene.g.cs
+C:\PPE\Projet gestion des stocks\Projet\Gestion_Stock_PPE\obj\Debug\net6.0-windows\StocksScene.baml
